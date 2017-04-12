@@ -1,0 +1,36 @@
+<!--
+ * Insta
+ * 
+ * Mohammed Sohail <sohail@forfuture.tech>
+ * Released under AGPL-3.0
+ *
+-->
+
+<html ng-app="Insta">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Insta</title>
+</head>
+
+<body>
+    <div class="container" ng-controller="getImageController">
+        <h1>Instagram Downloader</h1>
+        <form name="getImage" ng-submit="fetchImage()">
+            <span class="fieldRow">
+            <input type="text" name="url" ng-model="instaLink" placeholder="Enter Instagram URL here" ng-pattern="instagramPattern" required>
+            <button ng-cloak type="submit" ng-disabled=getImage.$invalid ng-click="reset()">Download</button>
+        </form>
+        <div>
+            <h3>{{message}}</h3>
+            <h2><a ng-show="success" href="{{link}}" download>Download Link<a/></h2>
+        </div>
+    </div>
+</body>
+
+</html>
