@@ -52,9 +52,6 @@ app.controller("getImageController", function ($scope, $http) {
     var regexp = /^.+\instagram\.com\/.+$/;
     return {
         test: function(value) {
-            if( $scope.requireTel === false ) {
-                return true;
-            }
             return regexp.test(value);
         }
     };
