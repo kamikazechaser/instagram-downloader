@@ -1,0 +1,299 @@
+/**
+ * Insta
+ * 
+ * Mohammed Sohail <sohail@forfuture.tech>
+ * Released under AGPL-3.0
+ * 
+ */
+
+body {
+  font-family: monospace;
+  background-color: #f4f7f9;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+h2 {
+  margin-top: 120px;
+  font-size: 30px;
+  background-color: #f4f7f9;
+  height: 24px;
+  text-align: center;
+  transition: all 2s ease-out;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 17px;
+  background-color: #f4f7f9;
+  height: 20px;
+  text-align: center;
+  transition: all 2s ease-out;
+}
+
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 17px;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+button[disabled=disabled],
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  pointer-events: none !important;
+}
+
+@media (min-width:501px) {
+  .container {
+    width: 450px;
+    margin: 50px auto;
+    min-height: 200px;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+  }
+  .container .fieldRow {
+    position: relative;
+    display: inline-block;
+    width: 450px;
+    margin: 10px 0;
+  }
+  .container .fieldRow.col2 {
+    width: 210px;
+    float: left;
+  }
+  .container .fieldRow.last {
+    float: right;
+  }
+  .container .fieldRow.focus input {
+    outline: none;
+    border-color: #4aa9f2;
+    box-shadow: 0px 0px 2px 3px #edf2f6;
+    background-color: #FFF;
+  }
+  .container .fieldRow.focus input::-webkit-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.focus input::-moz-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.focus input::-ms-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.focus input+label {
+    left: -100px;
+    opacity: 0;
+  }
+  .container .fieldRow.focus input+label+i {
+    opacity: 1;
+  }
+  .container .fieldRow.active input {
+    outline: none;
+    border-color: #d2dbe2;
+    box-shadow: none;
+    background-color: #ecf1f5;
+  }
+  .container .fieldRow.active input::-webkit-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.active input::-moz-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.active input::-ms-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.active input+label {
+    left: -100px;
+    opacity: 0;
+  }
+  .container .fieldRow.active input+label+i {
+    opacity: 1;
+  }
+  .container input {
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: solid 2px #d2dbe2;
+    height: 55px;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: monospace;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+    color: #000;
+  }
+  .container input+label {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    left: 20px;
+    color: #8d9dac;
+    font-family: monospace;
+    font-size: 14px;
+    font-size: 18px;
+    opacity: 1;
+    transition: all 0.6s ease;
+  }
+  .container input::-webkit-input-placeholder {
+    color: #8d9dac;
+  }
+  .container input::-moz-input-placeholder {
+    color: #8d9dac;
+  }
+  .container input::-ms-input-placeholder {
+    color: #8d9dac;
+  }
+  .container i {
+    position: absolute;
+    left: 20px;
+    top: 17px;
+    opacity: 0;
+    color: #8d9dac;
+    font-size: 21px;
+  }
+  button[type="submit"] {
+    width: 450px;
+    margin: 20px 0;
+    background: transparent;
+    border: none;
+    background: #4aa9f2;
+    color: #FFF;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 18px;
+    transition: all 0.35s ease;
+  }
+  button[type="submit"]:hover {
+    cursor: pointer;
+    background: #87D37C;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    margin: 75px auto;
+    min-height: 200px;
+    text-align: center;
+    position: relative;
+  }
+  .container .fieldRow {
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    margin: 10px 0;
+  }
+  .container .fieldRow.col2 {
+    width: 95%;
+  }
+  .container .fieldRow.focus input {
+    outline: none;
+    border-color: #4aa9f2;
+    box-shadow: 0px 0px 2px 3px #edf2f6;
+    background-color: #FFF;
+  }
+  .container .fieldRow.focus input::-webkit-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.focus input::-moz-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.focus input::-ms-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.focus input+label {
+    left: -100px;
+    opacity: 0;
+  }
+  .container .fieldRow.focus input+label+i {
+    opacity: 1;
+  }
+  .container .fieldRow.active input {
+    outline: none;
+    border-color: #d2dbe2;
+    box-shadow: none;
+    background-color: #ecf1f5;
+  }
+  .container .fieldRow.active input::-webkit-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.active input::-moz-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.active input::-ms-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.active input+label {
+    left: -100px;
+    opacity: 0;
+  }
+  .container .fieldRow.active input+label+i {
+    opacity: 1;
+  }
+  .container input {
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: solid 2px #d2dbe2;
+    height: 55px;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: monospace;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+    color: #000;
+  }
+  .container input+label {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    left: 20px;
+    color: #8d9dac;
+    font-family: monospace;
+    font-size: 14px;
+    font-size: 18px;
+    opacity: 1;
+    transition: all 0.6s ease;
+  }
+  .container input::-webkit-input-placeholder {
+    color: #8d9dac;
+  }
+  .container input::-moz-input-placeholder {
+    color: #8d9dac;
+  }
+  .container input::-ms-input-placeholder {
+    color: #8d9dac;
+  }
+  .container i {
+    position: absolute;
+    left: 20px;
+    top: 17px;
+    opacity: 0;
+    color: #8d9dac;
+    font-size: 21px;
+  }
+  button[type="submit"] {
+    width: 95%;
+    margin: 20px 0;
+    background: transparent;
+    border: none;
+    background: #4aa9f2;
+    color: #FFF;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 18px;
+    transition: all 0.35s ease;
+  }
+  button[type="submit"]:hover {
+    cursor: pointer;
+    background: #87D37C;
+  }
+}

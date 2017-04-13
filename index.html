@@ -12,7 +12,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Insta</title>
 </head>
 
@@ -26,12 +26,15 @@
         </form>
         <div>
             <h3>{{message}}</h3>
-            <h2><a ng-show="success" href="{{link}}" download>Download Link<a/></h2>
+            <h2><a ng-show="success" href="{{link}}" download>{{type}} Download Link<a/></h2>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
+<a href="/api.html" class="footer">API</a>
 
 </html>
